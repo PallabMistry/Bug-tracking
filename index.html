@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bug Tracking System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Bug Tracking System</h1>
+        
+        <!-- Bug Form -->
+        <div class="bug-form">
+            <h2>Log New Bug</h2>
+            <input type="text" id="bugDescription" placeholder="Bug Description">
+            <select id="bugPriority">
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+            </select>
+            <select id="bugStatus">
+                <option value="Open">Open</option>
+                <option value="In Progress">In Progress</option>
+                <option value="Closed">Closed</option>
+            </select>
+            <button onclick="addBug()">Add Bug</button>
+        </div>
+
+        <!-- Filter Section -->
+        <div class="filter-section">
+            <label for="statusFilter">Filter by Status:</label>
+            <select id="statusFilter" onchange="filterBugs()">
+                <option value="All">All</option>
+                <option value="Open">Open</option>
+                <option value="In Progress">In Progress</option>
+                <option value="Closed">Closed</option>
+            </select>
+        </div>
+
+        <!-- Bug List -->
+        <div class="bug-list">
+            <h2>Bug List</h2>
+            <ul id="bugs"></ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
